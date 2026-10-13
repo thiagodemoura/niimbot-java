@@ -34,7 +34,7 @@ name, so detection matters). Run `sizes` for every preset label size.
 
 ```bash
 mvn package
-# → target/niimbot-java-1.0.0-all.jar  (includes the BLE native libraries)
+# → target/niimbot-java-1.0.1-all.jar  (includes the BLE native libraries)
 ```
 
 BLE goes through [SimpleJavaBLE](https://docs.simpleble.org/simplejavable/usage)
@@ -45,14 +45,14 @@ one BLE connection at a time.
 ## Command line
 
 ```bash
-java -jar target/niimbot-java-1.0.0-all.jar scan
-java -jar target/niimbot-java-1.0.0-all.jar info
-java -jar target/niimbot-java-1.0.0-all.jar print label.png
-java -jar target/niimbot-java-1.0.0-all.jar print label.png --copies 3 --density 4
-java -jar target/niimbot-java-1.0.0-all.jar print a.png b.png c.png        # one continuous job
-java -jar target/niimbot-java-1.0.0-all.jar print --text "Thiago\nNiimbot" --bold
-java -jar target/niimbot-java-1.0.0-all.jar print --text "Hi" --model b1 --preview out.png   # no printer
-java -jar target/niimbot-java-1.0.0-all.jar print --test --size T12x40                     # calibration label
+java -jar target/niimbot-java-1.0.1-all.jar scan
+java -jar target/niimbot-java-1.0.1-all.jar info
+java -jar target/niimbot-java-1.0.1-all.jar print label.png
+java -jar target/niimbot-java-1.0.1-all.jar print label.png --copies 3 --density 4
+java -jar target/niimbot-java-1.0.1-all.jar print a.png b.png c.png        # one continuous job
+java -jar target/niimbot-java-1.0.1-all.jar print --text "Thiago\nNiimbot" --bold
+java -jar target/niimbot-java-1.0.1-all.jar print --text "Hi" --model b1 --preview out.png   # no printer
+java -jar target/niimbot-java-1.0.1-all.jar print --test --size T12x40                     # calibration label
 ```
 
 Options: `--printer NAME|ADDRESS` (name prefix, e.g. `B1-H1234`), `--model`,
@@ -76,7 +76,7 @@ Published to GitHub Packages. Add the repository and dependency to your `pom.xml
 <dependency>
     <groupId>dev.niimbot</groupId>
     <artifactId>niimbot-java</artifactId>
-    <version>1.0.0</version>
+    <version>1.0.1</version>
 </dependency>
 ```
 

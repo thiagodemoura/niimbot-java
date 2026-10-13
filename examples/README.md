@@ -24,7 +24,7 @@ java -cp "target/examples;$CP" com.example.labels.ExampleApp print B1     # prin
 ## In your own project
 
 Add the library (for example `mvn install` here, then depend on
-`dev.niimbot:niimbot-java:1.0.0`), copy `LabelPrintService`, and:
+`dev.niimbot:niimbot-java:1.0.1`), copy `LabelPrintService`, and:
 
 ```java
 var service = new LabelPrintService(LabelPrintService.Config.defaults("B1"), System.out::println);

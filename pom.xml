@@ -6,7 +6,7 @@
 
     <groupId>dev.niimbot</groupId>
     <artifactId>niimbot-java</artifactId>
-    <version>1.0.0</version>
+    <version>1.0.1</version>
     <name>niimbot-java</name>
     <description>Java driver for Niimbot label printers over BLE (port of niimbot-web-bluetooth)</description>
     <url>https://github.com/thiagodemoura/niimbot-java</url>
@@ -52,7 +52,7 @@
                 <artifactId>maven-surefire-plugin</artifactId>
                 <version>3.2.5</version>
             </plugin>
-            <!-- mvn package → target/niimbot-java-1.0.0-all.jar, runnable: java -jar … print label.png -->
+            <!-- mvn package → target/niimbot-java-1.0.1-all.jar, runnable: java -jar … print label.png -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-shade-plugin</artifactId>
