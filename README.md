@@ -63,6 +63,29 @@ Exit codes: 0 ok, 1 error, 2 usage, 3 print not confirmed (check the paper).
 
 ## Library
 
+Published to GitHub Packages. Add the repository and dependency to your `pom.xml`:
+
+```xml
+<repositories>
+    <repository>
+        <id>github</id>
+        <url>https://maven.pkg.github.com/thiagodemoura/niimbot-java</url>
+    </repository>
+</repositories>
+
+<dependency>
+    <groupId>dev.niimbot</groupId>
+    <artifactId>niimbot-java</artifactId>
+    <version>1.0.0</version>
+</dependency>
+```
+
+GitHub Packages requires authentication even for public packages: add a
+`<server><id>github</id>` with your GitHub username and a token with `read:packages`
+to `~/.m2/settings.xml`. Alternatively, download the jars from
+[Releases](https://github.com/thiagodemoura/niimbot-java/releases).
+For integrating into an app, see [examples/](examples/).
+
 ```java
 import dev.niimbot.*;
 import dev.niimbot.ble.SimpleBleTransport;

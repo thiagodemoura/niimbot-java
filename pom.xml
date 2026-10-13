@@ -9,6 +9,19 @@
     <version>1.0.0</version>
     <name>niimbot-java</name>
     <description>Java driver for Niimbot label printers over BLE (port of niimbot-web-bluetooth)</description>
+    <url>https://github.com/thiagodemoura/niimbot-java</url>
+
+    <licenses>
+        <license>
+            <name>MIT License</name>
+            <url>https://opensource.org/licenses/MIT</url>
+        </license>
+    </licenses>
+
+    <scm>
+        <url>https://github.com/thiagodemoura/niimbot-java</url>
+        <connection>scm:git:https://github.com/thiagodemoura/niimbot-java.git</connection>
+    </scm>
 
     <properties>
         <maven.compiler.release>25</maven.compiler.release>
@@ -51,6 +64,8 @@
                         <configuration>
                             <shadedArtifactAttached>true</shadedArtifactAttached>
                             <shadedClassifierName>all</shadedClassifierName>
+                            <!-- keep simplejavable in the published pom: the plain jar needs it -->
+                            <createDependencyReducedPom>false</createDependencyReducedPom>
                             <transformers>
                                 <transformer implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
                                     <mainClass>dev.niimbot.cli.NiimbotCli</mainClass>
@@ -60,6 +75,26 @@
                     </execution>
                 </executions>
             </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-source-plugin</artifactId>
+                <version>3.3.1</version>
+                <executions>
+                    <execution>
+                        <id>attach-sources</id>
+                        <goals><goal>jar-no-fork</goal></goals>
+                    </execution>
+                </executions>
+            </plugin>
         </plugins>
     </build>
+
+    <!-- mvn deploy → GitHub Packages; needs a <server id="github"> with a write:packages token in settings.xml -->
+    <distributionManagement>
+        <repository>
+            <id>github</id>
+            <name>GitHub Packages</name>
+            <url>https://maven.pkg.github.com/thiagodemoura/niimbot-java</url>
+        </repository>
+    </distributionManagement>
 </project>
