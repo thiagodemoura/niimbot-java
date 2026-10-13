@@ -1,6 +1,7 @@
 MIT License
 
-Copyright (c) 2026 Thiago Moura
+Copyright (c) 2026 iscarelli (niimbot-web-bluetooth, original JavaScript driver)
+Copyright (c) 2026 Thiago Barbosa Lima de Moura (Java port)
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
